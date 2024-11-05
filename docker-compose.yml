@@ -1,7 +1,7 @@
 version: "3.5"
 
 services:
-  config-file-server:
+  config-server:
     image: config-server
     restart: always
     build:
@@ -120,3 +120,4 @@ services:
       - microservice-produits
       - microservice-commandes
       - microservice-paiements
+
