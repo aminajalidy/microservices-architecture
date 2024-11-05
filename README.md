@@ -1,4 +1,4 @@
-# TP Edge Services - E-commerce
+# TP E-commerce
 ## Auteur
 
 | ![Amina JALIDY](https://avatars.githubusercontent.com/u/103306906?v=4)  | ![Imad Maamri](https://avatars.githubusercontent.com/u/118177419?v=4)          | 
