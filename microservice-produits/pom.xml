@@ -64,7 +64,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>1.18.24</optional>
+            <version>1.18.24</version>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>
