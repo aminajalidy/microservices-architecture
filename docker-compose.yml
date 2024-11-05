@@ -1,0 +1,122 @@
+version: "3.5"
+
+services:
+  config-file-server:
+    image: config-server
+    restart: always
+    build:
+      context: ./config-server
+      dockerfile: Dockerfile
+    expose:
+      - 8888
+    ports:
+      - 8888:8888
+
+  eureka-server:
+    image: eureka-server
+    restart: always
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    expose:
+      - 8761
+    ports:
+      - 8761:8761
+    depends_on:
+      - config-server
+    environment:
+      spring.cloud.config.uri: http://config-server:8888
+      EUREKA_HOST: eureka-server
+
+  microservice-produits:
+    image: microservice-produits
+    restart: always
+    build:
+      context: ./microservice-produits
+      dockerfile: Dockerfile
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    depends_on:
+      - config-server
+      - eureka-server
+    environment:
+      spring.cloud.config.uri: http://config-server:8888
+      EUREKA_HOST: eureka-server
+      SPRING_DATASOURCE_URL: jdbc:h2:mem:produitsdb;DB_CLOSE_ON_EXIT=FALSE
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.h2.Driver
+
+  microservice-commandes:
+    image: microservice-commandes
+    restart: always
+    build:
+      context: ./microservice-commandes
+      dockerfile: Dockerfile
+    expose:
+      - 8081
+    ports:
+      - 8081:8081
+    depends_on:
+      - config-server
+      - eureka-server
+    environment:
+      spring.cloud.config.uri: http://config-server:8888
+      EUREKA_HOST: eureka-server
+      SPRING_DATASOURCE_URL: jdbc:h2:mem:commandesdb;DB_CLOSE_ON_EXIT=FALSE
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.h2.Driver
+
+  microservice-paiements:
+    image: microservice-paiements
+    restart: always
+    build:
+      context: ./microservice-paiements
+      dockerfile: Dockerfile
+    expose:
+      - 8082
+    ports:
+      - 8082:8082
+    depends_on:
+      - config-server
+      - eureka-server
+    environment:
+      spring.cloud.config.uri: http://config-server:8888
+      EUREKA_HOST: eureka-server
+      SPRING_DATASOURCE_URL: jdbc:h2:mem:paiementsdb;DB_CLOSE_ON_EXIT=FALSE
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.h2.Driver
+
+  zuul-server:
+    image: zuul-server
+    restart: always
+    build:
+      context: ./zuul-server
+      dockerfile: Dockerfile
+    expose: 
+      - 9004
+    ports:
+      - 9004:9004
+    depends_on:
+      - microservice-produits
+      - microservice-commandes
+      - microservice-paiements
+    environment:
+      spring.cloud.config.uri: http://config-server:8888
+      EUREKA_HOST: eureka-server
+
+  microservice-clients-ui:
+    image: microservice-clients-ui
+    restart: always
+    volumes:
+      - './microservice-clients-ui:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    build:
+      context: ./microservice-clients-ui
+      dockerfile: Dockerfile
+    expose: 
+      - 4200
+    ports:
+      - 4200:4200
+    depends_on:
+      - microservice-produits
+      - microservice-commandes
+      - microservice-paiements
