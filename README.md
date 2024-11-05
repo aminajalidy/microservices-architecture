@@ -83,7 +83,7 @@ Nous utilisons un serveur de configuration centralisé pour gérer les paramètr
 - **Améliorer la maintenance** : La séparation des préoccupations rend le code plus modulaire et facile à maintenir.
 - **Faciliter les changements** : Les paramètres peuvent être modifiés dynamiquement sans redéployer l'application.
 
-![Décentralisation de la Configuration](images/decent-config.png)
+![Décentralisation de la Configuration](images/spring-cloud-config-server.png)
 
 ---
 
