@@ -88,15 +88,16 @@ Nous utilisons un serveur de configuration centralisé pour gérer les paramètr
 
 ## Eureka - Naming Service
 
+![Eureka Serverr](images/eurekaregister.jpg)
 Eureka est utilisé comme service de registre pour la découverte des microservices. Cela permet une gestion dynamique des instances et une meilleure résilience du système.
-![Eureka Serverr](images/eurekaregister.png)
+
 
 ### Avantages d'Eureka
 1. **Découverte dynamique des services** : Inscription automatique des services, facilitant la communication inter-services.
 2. **Surveillance et supervision** : Vue centralisée de l'état des services et détection rapide des erreurs.
 3. **Équilibrage de charge** : Prise en charge de plusieurs instances d'un même service pour une meilleure répartition du trafic.
 
-![Eureka Server](images/architectureeureka.png)
+![Eureka Server](images/architectureeureka.jpg)
 
 ---
 
