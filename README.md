@@ -103,8 +103,10 @@ Eureka est utilisé comme service de registre pour la découverte des microservi
 
 ## Zuul Proxy - API Gateway
 
-Zuul sert de passerelle API qui gère le routage et la sécurité des requêtes entrantes.
+Zuul Server est une application de passerelle API. Il traite toutes les demandes et effectue le routage dynamique des applications de microservices. Il est également connu sous le nom de serveur Edge. Zuul est conçu pour permettre le routage dynamique, la surveillance, la résilience et la sécurité. Il peut également acheminer les demandes vers plusieurs groupes Amazon Auto Scaling.
+Par exemple, /api/produits est mappé vers le service produit et /api/utilisateur est mappé vers le service utilisateur. Le serveur Zuul achemine dynamiquement les demandes vers l'application back-end correspondante.
 
+Traduit avec DeepL.com (version gratuite)
 ### Avantages de Zuul
 1. **Point d'entrée unique** : Simplifie la gestion du trafic en centralisant les requêtes.
 2. **Routage dynamique** : Redirige les requêtes vers les services appropriés en fonction des règles configurées.
