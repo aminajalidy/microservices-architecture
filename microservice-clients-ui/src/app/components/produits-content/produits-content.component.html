@@ -1,0 +1,46 @@
+<!-- Boutons pour basculer entre les vues -->
+<div class="buttons">
+  <button mat-flat-button color="primary" (click)="handleViewClick()">Voir</button>
+  <button mat-flat-button color="primary" class="button-form" (click)="handleAddClick()">Ajouter</button>
+</div>
+
+<!-- Section pour afficher les produits -->
+<div *ngIf="isViewing">
+  <app-produit-card></app-produit-card>
+  <div class="row center-card">
+    <div class="col-lg-4" *ngFor="let produit of produits">
+      <app-produit-card
+        [titre]="produit.titre"
+        [description]="produit.description"
+        [prix]="produit.prix"
+        [id]="produit.id"
+      ></app-produit-card>
+    </div>
+  </div>
+</div>
+
+<!-- Formulaire pour ajouter un nouveau produit -->
+<div *ngIf="isAdding">
+  <form class="row g-3 center-form" (ngSubmit)="submitForm()">
+    <div class="col-md-6">
+      <label for="titre" class="form-label">Titre</label>
+      <input type="text" class="form-control" id="titre" name="titre" [(ngModel)]="titre">
+    </div>
+    <div class="col-md-6">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" class="form-control" id="description" name="description" [(ngModel)]="description">
+    </div>
+    <div class="col-md-6">
+      <label for="image" class="form-label">URL de l'image (optionnel)</label>
+      <input type="text" class="form-control" id="image" name="image" [(ngModel)]="image">
+    </div>
+    <div class="col-md-6">
+      <label for="prix" class="form-label">Prix</label>
+      <input type="number" class="form-control" id="prix" name="prix" [(ngModel)]="prix">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+  </form>
+</div>
+

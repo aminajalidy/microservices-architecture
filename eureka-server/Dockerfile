@@ -1,4 +1,4 @@
-FROM openjdk:17-oracle
+FROM amazoncorretto:17
 VOLUME /tmp
 COPY target/*.jar /eureka/eureka-server.jar
 EXPOSE 8761

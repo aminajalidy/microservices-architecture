@@ -1,4 +1,4 @@
-FROM openjdk:17-oracle
+FROM amazoncorretto:17
 VOLUME /tmp
 COPY target/*.jar zuul-server.jar
 EXPOSE 9004
