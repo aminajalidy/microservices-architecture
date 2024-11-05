@@ -1,11 +1,11 @@
 # TP Edge Services - E-commerce
 ## Auteur
-| ![Amina JALIDY](https://avatars.githubusercontent.com/u/103306906?v=4)   |
-| :--------------: |
-| **Jalidy Amina** |
-| Étudiante en 5e année à l'INSA Hauts-de-France |
-| [Mon GitHub](https://github.com/jalidyamina) |
-| amina.jalidy@uphf.fr|
+
+| ![Amina JALIDY](https://avatars.githubusercontent.com/u/103306906?v=4)  | ![Imad Maamri](https://avatars.githubusercontent.com/u/118177419?v=4)          | 
+| :--------------: | :--------------: | 
+| Amina JALIDY | Imad Maamri        |
+| [@aminajalidy](https://github.com/aminajalidy) | [@Imadm12](https://github.com/Khady71) | 
+| amina.jalidy@uphf.fr  | imad.maamri@uphf.fr           | 
 
 ---
 
