@@ -1,30 +1,33 @@
 package com.microservices.microservicecommandes.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
 import java.util.Date;
 
-@Entity // Indique que cette classe est une entité JPA
-@Table(name = "commandes") // Nom de la table dans la base de données
+@Data
+@Entity
+@Table(name="commande")
 public class Commande {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Stratégie de génération de l'ID
+    @GeneratedValue
     private int id;
 
     private Integer productId;
+
     private Date dateCommande;
+
     private Integer quantite;
+
     private Boolean commandePayee;
 
-    // Constructeur sans arguments
     public Commande() {
     }
 
-    // Constructeur avec arguments
     public Commande(int id, Integer productId, Date dateCommande, Integer quantite, Boolean commandePayee) {
         this.id = id;
         this.productId = productId;
@@ -33,7 +36,6 @@ public class Commande {
         this.commandePayee = commandePayee;
     }
 
-    // Getters et setters
     public int getId() {
         return id;
     }
@@ -76,7 +78,7 @@ public class Commande {
 
     @Override
     public String toString() {
-        return "Commande{" +
+        return "commande{" +
                 "id=" + id +
                 ", productId=" + productId +
                 ", dateCommande=" + dateCommande +

@@ -1,28 +1,28 @@
 package com.microservices.microservicepaiements.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
+@Table(name="paiement")
 public class Paiement {
 
     @Id
     @GeneratedValue
     private int id;
 
-    @Column(unique = true)
+    @Column(unique=true)
     private Integer idCommande;
 
-    private Double montant;
+    private Integer montant;
 
     private Long numeroCarte;
 
     public Paiement() {
     }
 
-    public Paiement(int id, Integer idCommande, Double montant, Long numeroCarte) {
+    public Paiement(int id, Integer idCommande, Integer montant, Long numeroCarte) {
         this.id = id;
         this.idCommande = idCommande;
         this.montant = montant;
@@ -45,11 +45,11 @@ public class Paiement {
         this.idCommande = idCommande;
     }
 
-    public Double getMontant() {
+    public Integer getMontant() {
         return montant;
     }
 
-    public void setMontant(Double montant) {
+    public void setMontant(Integer montant) {
         this.montant = montant;
     }
 
