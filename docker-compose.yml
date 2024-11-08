@@ -1,5 +1,8 @@
+version: "3.5"
+
 services:
-  config-server:
+  config-file-server:
+    image: config-server
     restart: always
     build:
       context: ./config-server
@@ -10,6 +13,7 @@ services:
       - 8888:8888
 
   eureka-server:
+    image: eureka-server
     restart: always
     build:
       context: ./eureka-server
@@ -25,6 +29,7 @@ services:
       EUREKA_HOST: eureka-server
 
   microservice-produits:
+    image: microservice-produits
     restart: always
     build:
       context: ./microservice-produits
@@ -43,6 +48,7 @@ services:
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.h2.Driver
 
   microservice-commandes:
+    image: microservice-commandes
     restart: always
     build:
       context: ./microservice-commandes
@@ -61,6 +67,7 @@ services:
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.h2.Driver
 
   microservice-paiements:
+    image: microservice-paiements
     restart: always
     build:
       context: ./microservice-paiements
@@ -79,11 +86,12 @@ services:
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.h2.Driver
 
   zuul-server:
+    image: zuul-server
     restart: always
     build:
       context: ./zuul-server
       dockerfile: Dockerfile
-    expose:
+    expose: 
       - 9004
     ports:
       - 9004:9004
@@ -96,15 +104,15 @@ services:
       EUREKA_HOST: eureka-server
 
   microservice-clients-ui:
-    platform: linux/arm64
+    image: microservice-clients-ui
     restart: always
+    volumes:
+      - './microservice-clients-ui:/usr/src/app'
+      - '/usr/src/app/node_modules'
     build:
       context: ./microservice-clients-ui
       dockerfile: Dockerfile
-    volumes:
-      - ./microservice-clients-ui:/usr/src/app
-      - /usr/src/app/node_modules
-    expose:
+    expose: 
       - 4200
     ports:
       - 4200:4200

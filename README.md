@@ -123,6 +123,11 @@ Voici un schéma simplifié de l'architecture des microservices.
 ![Architecture Diagram](images/archi.png)
 
 ---
+Voici un aperçu du tableau de bord Eureka où tous les microservices sont visibles et enregistrés :
+
+![Tableau de bord Eureka](images/IMGEureka.png)
+
+L'image ci-dessus montre comment Eureka assure la découverte dynamique des services, offrant une vue centralisée de leur état et facilitant la résilience et l'adaptabilité du système. Cela garantit que les services peuvent interagir efficacement tout en permettant une surveillance et une gestion simplifiées.
 
 ## Étapes pour exécuter le projet
 
