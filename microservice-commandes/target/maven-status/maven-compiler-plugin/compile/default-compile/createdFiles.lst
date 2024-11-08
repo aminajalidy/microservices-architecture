@@ -1,0 +1,5 @@
+com/microservices/microservicecommandes/controller/CommandeController.class
+com/microservices/microservicecommandes/model/Message.class
+com/microservices/microservicecommandes/MicroserviceCommandesApplication.class
+com/microservices/microservicecommandes/repository/CommandeRepository.class
+com/microservices/microservicecommandes/model/Commande.class

@@ -1,0 +1,5 @@
+/Users/jalidyamina/microservices-architecture/microservice-commandes/src/main/java/com/microservices/microservicecommandes/MicroserviceCommandesApplication.java
+/Users/jalidyamina/microservices-architecture/microservice-commandes/src/main/java/com/microservices/microservicecommandes/controller/CommandeController.java
+/Users/jalidyamina/microservices-architecture/microservice-commandes/src/main/java/com/microservices/microservicecommandes/model/Commande.java
+/Users/jalidyamina/microservices-architecture/microservice-commandes/src/main/java/com/microservices/microservicecommandes/model/Message.java
+/Users/jalidyamina/microservices-architecture/microservice-commandes/src/main/java/com/microservices/microservicecommandes/repository/CommandeRepository.java
