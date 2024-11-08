@@ -1,0 +1,5 @@
+com/microservices/microserviceproduits/MicroserviceProduitsApplication.class
+com/microservices/microserviceproduits/model/Message.class
+com/microservices/microserviceproduits/model/Produit.class
+com/microservices/microserviceproduits/controller/ProduitController.class
+com/microservices/microserviceproduits/repository/ProduitRepository.class

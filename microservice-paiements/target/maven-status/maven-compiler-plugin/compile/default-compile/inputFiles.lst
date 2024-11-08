@@ -1,0 +1,5 @@
+/Users/jalidyamina/microservices-architecture/microservice-paiements/src/main/java/com/microservices/microservicepaiements/MicroservicePaiementsApplication.java
+/Users/jalidyamina/microservices-architecture/microservice-paiements/src/main/java/com/microservices/microservicepaiements/controller/PaiementController.java
+/Users/jalidyamina/microservices-architecture/microservice-paiements/src/main/java/com/microservices/microservicepaiements/model/Message.java
+/Users/jalidyamina/microservices-architecture/microservice-paiements/src/main/java/com/microservices/microservicepaiements/model/Paiement.java
+/Users/jalidyamina/microservices-architecture/microservice-paiements/src/main/java/com/microservices/microservicepaiements/repository/PaiementRepository.java

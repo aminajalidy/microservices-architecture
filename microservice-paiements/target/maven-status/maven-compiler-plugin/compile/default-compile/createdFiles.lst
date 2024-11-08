@@ -1,0 +1,5 @@
+com/microservices/microservicepaiements/model/Message.class
+com/microservices/microservicepaiements/repository/PaiementRepository.class
+com/microservices/microservicepaiements/controller/PaiementController.class
+com/microservices/microservicepaiements/model/Paiement.class
+com/microservices/microservicepaiements/MicroservicePaiementsApplication.class

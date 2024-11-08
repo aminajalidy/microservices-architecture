@@ -1,0 +1,5 @@
+/Users/jalidyamina/microservices-architecture/microservice-produits/src/main/java/com/microservices/microserviceproduits/MicroserviceProduitsApplication.java
+/Users/jalidyamina/microservices-architecture/microservice-produits/src/main/java/com/microservices/microserviceproduits/controller/ProduitController.java
+/Users/jalidyamina/microservices-architecture/microservice-produits/src/main/java/com/microservices/microserviceproduits/model/Message.java
+/Users/jalidyamina/microservices-architecture/microservice-produits/src/main/java/com/microservices/microserviceproduits/model/Produit.java
+/Users/jalidyamina/microservices-architecture/microservice-produits/src/main/java/com/microservices/microserviceproduits/repository/ProduitRepository.java
