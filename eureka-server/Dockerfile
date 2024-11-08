@@ -1,5 +1,5 @@
 FROM amazoncorretto:17
 VOLUME /tmp
-COPY target/*.jar /eureka/eureka-server.jar
+COPY target/eureka-server-0.0.1-SNAPSHOT.jar eureka-server.jar
 EXPOSE 8761
-ENTRYPOINT ["java","-jar","eureka-server.jar"]
+ENTRYPOINT ["java","-jar","/eureka-server.jar"]

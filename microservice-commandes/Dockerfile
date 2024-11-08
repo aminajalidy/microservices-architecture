@@ -1,10 +1,5 @@
-# Utilisez l'image de base Amazon Corretto 17
 FROM amazoncorretto:17
-# Configure un volume temporaire
 VOLUME /tmp
-# Copie le fichier .jar généré dans l'image
-COPY target/microservice-commandes.jar app.jar
-# Exposez le port sur lequel le service écoute
+COPY target/microservice-commandes-0.0.1-SNAPSHOT.jar microservice-commandes.jar
 EXPOSE 8081
-# Commande pour démarrer l'application
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+ENTRYPOINT ["java","-jar","/microservice-commandes.jar"]
